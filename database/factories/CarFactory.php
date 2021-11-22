@@ -14,17 +14,28 @@ class CarFactory extends Factory
      */
     public function definition()
     {
-        // $b = Brand::all();
-        // $b->name = "Hyundai";
+        // 브랜드가 없을 때, 
+        // $b = null;
+        // if(Brand::all()->count() == 0){
+        //     $b = new Brand();
+        //     $b->name = "KIA Moters";
+        //     $b->save();
+        // }else {
+        //     $b = Brand::first();
+        // }
+
+        // return [
+        //     'brand_id' => $b->id,
+        // ]
         
         return [
-            'name' => 'Sonata',
+            'name' => $this->faker->name(),
             'image' => $this->faker->imageUrl(320, 240, 'cars'),
             'bulid' => 2021,
             'brand_id' => 1,
-            'price' => 3500,
-            'type' => 'Middle',
-            'style'=> 'Sedan',
+            'price' => 0,
+            'type' => 'Car',
+            'style'=> 'Car',
             'created_at' => now(),
             'updated_at' => now(),
         ];
