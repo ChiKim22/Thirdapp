@@ -9,10 +9,7 @@ class Car extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'brand_id',
-    ];
+    protected $guarded = [];
 
     public function brand() {
         return $this->belongsTo(Brand::class);
