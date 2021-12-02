@@ -9,7 +9,7 @@ class Index extends Component
     public $cars;
     /**
      * Create a new component instance.
-     *
+    *
      * @return void
      */
     public function __construct($cars)
